@@ -130,8 +130,6 @@ struct CliArgs {
 }
 
 fn main() {
-    // let pathdir = Path::new("./python_code/src");
-    // let testdir = Path::new("./python_code/tests");
     let args = CliArgs::parse();
     let (root, test_dir) = split_test_path(&args.test_path);
     let parsed = parse_src_tree(&args.source_path, &test_dir);
